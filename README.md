@@ -4,3 +4,6 @@ BAsH script and is evolving into something a bit more feature rich. It will like
 
 # todo.sh
 This is the initial BASH script I wrote for this program. It accesses a file, outputs its contents, and asks if you need to update the file. Upon confirmation it opens up emacs, though you can open it in any editor you choose. Once you are done close the editor and the script terminates.
+
+# schedule.py (WIP)
+The planned GUI version of the current file and script form of this idea. It will feature a list widget and buttons. Eventually it will allow updates in the widget, read from a file, and write to the file. All from a pretty GUI instead of editors and terminal. It will also work on any platform provided GTK is installed.
