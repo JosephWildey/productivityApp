@@ -1,3 +1,5 @@
+If you're looking for the finalized project please see the other folder.
+
 If you wish to install todo.sh, here are the steps.
 1) Copy the code from the todo.sh page.
 2) Open your favorite editor - nano is fine - and paste. Save file with a ".sh" extension.
