@@ -6,8 +6,8 @@ If you wish to install todo.sh, here are the steps.
 3) Use chmod +x script.sh to make it executable
 
 If you manage to skip steps 1 & 2 by just downloading the file that's fine. Step 3 may still be required. Also,
-the use of emacs is not required. Simply change "emacs" to "nano" if you prefer the easier editor. It won't break
-anything. I shouldn't be forgetting anything else. I do not plan on updating this script from here.
+the use of emacs is not required. Simply change "emacs" to "nano" in the source code if you prefer the easier editor. 
+It won't break anything. I shouldn't be forgetting anything else. Lastly, I do not plan on updating this script from here.
 
 
 If for some reason you stumble upon this and find this helpful or something please give me credit. Thanks!
