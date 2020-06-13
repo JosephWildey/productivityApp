@@ -22,8 +22,8 @@ then
     echo
     
     # back up the original version of the file before opening it in an editor
-    sudo ~/schedule.txt > schedule.bak
-    sudo emacs ~/schedule.txt
+    cp ~/schedule.txt ~/schedule.bak
+    emacs ~/schedule.txt
 else
     # They don't need access so there's nothing to do, just terminate
     echo "Have a great day..."
