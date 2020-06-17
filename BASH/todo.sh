@@ -1,3 +1,5 @@
+# This is the traditional way to start a script in BASH, but it returns errors in Ubuntu so I commented it out. 
+# Remove the comment based on distro you're using.
 # !#/bin/bash
 
 # Let the user know what's going on and create some blank space
