@@ -13,3 +13,5 @@ This script is available in the BASH folder. See that folder for the readme.
 The planned GUI version of the current file and script form of this idea. It will feature a list widget and buttons. Eventually it will allow updates in the widget, read from a file, and write to the file. All from a pretty GUI instead of editors and terminal. It will also work on any platform provided GTK is installed.
 
 This entire package will be found in its own directory. It will become much larger than a single file in hindsight.
+
+This portion was created with help from: https://python-gtk-3-tutorial.readthedocs.io/en/latest/ (I don't know anything about GTK, esp. the Python wrapper)
