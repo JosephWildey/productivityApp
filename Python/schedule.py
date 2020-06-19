@@ -1,5 +1,6 @@
 import gi
 import csv
+import datetime
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
@@ -20,11 +21,12 @@ class TreeViewFilterWindow(Gtk.Window):
 
         # Creating the ListStore model
         self.software_liststore = Gtk.ListStore(str, str, str, str)
-     # loop through file and retrieve values instead
+     # loop through file here instead
         with open('schedule.csv', 'r', encoding="UTF-8") as f:
              reader = csv.reader(f, delimiter=',')
              for row in reader:
                  self.software_liststore.append(list(row))
+     # end loop
         self.current_filter_language = None
 
         # Creating the filter, feeding it with the liststore model
@@ -35,7 +37,7 @@ class TreeViewFilterWindow(Gtk.Window):
         # creating the treeview, making it use the filter as a model, and adding the columns
         self.treeview = Gtk.TreeView.new_with_model(self.language_filter)
         for i, column_title in enumerate(
-            ["Date", "Time", "Type", "Details"]
+            ["Date", "Time", "Category", "Details"]
         ):
             renderer = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, renderer, text=i)
@@ -43,7 +45,7 @@ class TreeViewFilterWindow(Gtk.Window):
 
         # creating buttons to filter by programming language, and setting up their events
         self.buttons = list()
-        for prog_language in ["Appointment", "Assignment", "Other"]:
+        for prog_language in ["Add", "Edit", "Save", "Close"]:
             button = Gtk.Button(prog_language)
             self.buttons.append(button)
             button.connect("clicked", self.on_selection_button_clicked)
@@ -62,6 +64,13 @@ class TreeViewFilterWindow(Gtk.Window):
         self.scrollable_treelist.add(self.treeview)
 
         self.show_all()
+
+    def write_to_file():
+        with open('schedule.csv', 'wb') as f:
+            for row in store:
+                writer = csv.writer(f)
+                writer.writerows(row)
+        
 
     def language_filter_func(self, model, iter, data):
         """Tests if the language in the row is the one in the filter"""
