@@ -4,9 +4,13 @@ This is the meat and potatoes of the program. There's still a lot of work to be 
 terminal it will technically work as is. I'm mostly uploading this to github to keep track of intended updates and stuff.
 
 # Todo
-- Fix the buttons
-- Allow editing of fields
-- automatically remove old events
+- Finish implementation of buttons
+- Add, edit, and delete information in fields
+- Read information from and write information to file (again)
 - allow user to save updated schedules
+- automatically delete old information
 
 There's more planned, but this is a pretty good roadmap for now.
+
+# Known Bugs
+- Cannot close the application once the popup has been opened. (Working on that)
