@@ -15,7 +15,7 @@ class ScheduleApplication:
 builder = Gtk.Builder()
 builder.add_from_file("windowMain.glade")
 
-# retrieve the window object
+# retrieve the window objects
 window = builder.get_object("wdwMain")
 addEntryWindow = builder.get_object("wdwAdd")
 
@@ -23,7 +23,7 @@ def on_AddButton_clicked(self):
     "This function displays the popup"
     addEntryWindow.show_all()
 
-# retrive the addbutton
+# retrive the addbutton and enable it to open the popup window
 addButton = builder.get_object("btnAddPopup")
 addButton.connect("clicked", on_AddButton_clicked)
 
