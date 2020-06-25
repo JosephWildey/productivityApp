@@ -3,7 +3,7 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-
+# model for treeview, stores event information
 events = Gtk.ListStore(str, str, str, str)
 
 class ScheduleApplication:
