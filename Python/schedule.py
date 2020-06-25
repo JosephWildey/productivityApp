@@ -20,6 +20,7 @@ window = builder.get_object("wdwMain")
 addEntryWindow = builder.get_object("wdwAdd")
 
 def on_AddButton_clicked(self):
+    "This function displays the popup"
     addEntryWindow.show_all()
 
 # retrive the addbutton
