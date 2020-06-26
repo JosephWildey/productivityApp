@@ -10,4 +10,4 @@ This is the initial BASH script I wrote for this program. It accesses a file, ou
 This script is available in the BASH folder. See that folder for the readme.
 
 # Python
-This is the OS agnostic desktop application version. It will read and store information in CSV files. It allow updating, editing, and removing information. I designed the GUI w/ Glade and wrote the code.
+This is the OS agnostic desktop application version. It will read and store information in CSV files. It allow updating, editing, and removing information. I designed the GUI w/ Glade and wrote the code. See the Python file for a current roadmap. More ideas will be implemented with time. 
