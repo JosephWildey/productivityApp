@@ -6,8 +6,8 @@ from gi.repository import Gtk
 # model for treeview, stores event information
 events = Gtk.ListStore(str, str, str, str)
 
-class ScheduleApplication:
 # exit application
+class ScheduleApplication:
     def onDestroy(self, *args):
         Gtk.main_quit()
 
