@@ -1,6 +1,6 @@
 # Introduction
 
-This is the meat and potatoes of the program. There's still a lot of work to be done. 
+This is the meat and potatoes of the program. There's still a lot of work to be done. However once it is finished it will be a full featured GUI that will hopefully help you budget your time. 
 
 # Todo
 - Finish implementation of buttons
