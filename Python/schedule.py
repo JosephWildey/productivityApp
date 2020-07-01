@@ -4,14 +4,14 @@ import csv
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-#store event information for retrieval and display in the treeview
-events = Gtk.ListStore(str, str, str, str, str)
+# create the liststore
+events = Gtk.ListStore(str, str, str, str)
 
 # fill events before it is attached to the treeview
-with open('schedule.csv', newline='') as f:
-    reader = csv.reader(f)
+with open('schedule.csv', 'r') as f:
+    reader = csv.reader(f, delimiter=',')
     for row in reader:
-        events.append(list(row))
+        events.append(row)
 
 class ScheduleApplication:
 # exit application
@@ -44,6 +44,12 @@ addCloseWindow.connect("clicked", on_CloseButton_clicked)
 
 # retrieve the TreeView Object
 mainDisplay = builder.get_object("trvMain")
+
+# create columns for the treeiew and attach them to renderers
+for i, column_title in enumerate(["Date", "Time", "Type", "Details"]):
+    renderer = Gtk.CellRendererText()
+    column = Gtk.TreeViewColumn(column_title, renderer, text=1)
+    mainDisplay.append_column(column)
 
 # connect treeview to liststore
 mainDisplay.set_model(events)
