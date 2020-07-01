@@ -1,13 +1,20 @@
 import gi
+import csv
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-# model for treeview, stores event information
+
 events = Gtk.ListStore(str, str, str, str)
 
-# exit application
+# fill events before it is attached to the treeview
+with open('schedule.csv', newline='') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        events.append(list(row))
+
 class ScheduleApplication:
+# exit application
     def onDestroy(self, *args):
         Gtk.main_quit()
 
@@ -15,17 +22,25 @@ class ScheduleApplication:
 builder = Gtk.Builder()
 builder.add_from_file("windowMain.glade")
 
-# retrieve the window objects
+# retrieve the window object
 window = builder.get_object("wdwMain")
 addEntryWindow = builder.get_object("wdwAdd")
 
+#retrive the buttons
+addButton = builder.get_object("btnAddPopup")
+addCloseWindow = builder.get_object("btnAddWindowClose")
+
 def on_AddButton_clicked(self):
-    "This function displays the popup for adding entries"
+    "This will display the popup when the add button is clicked"
     addEntryWindow.show_all()
 
-# retrive the addbutton and enable it to open the popup window
-addButton = builder.get_object("btnAddPopup")
+def on_CloseButton_clicked(self):
+    "This will close the add entry popup when clicked"
+    addEntryWindow.destroy()
+
+# connect the buttons to actions
 addButton.connect("clicked", on_AddButton_clicked)
+addCloseWindow.connect("clicked", on_CloseButton_clicked)
 
 # retrieve the TreeView Object
 mainDisplay = builder.get_object("trvMain")

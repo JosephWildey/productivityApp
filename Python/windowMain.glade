@@ -201,8 +201,14 @@
               </object>
             </child>
             <child>
-              <object class="GtkTreeViewColumn" id="detailsColumn">
+              <object class="GtkTreeViewColumn" id="typeColumn">
                 <property name="sizing">autosize</property>
+                <property name="title" translatable="yes">Type</property>
+                <property name="sort_indicator">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkTreeViewColumn" id="detailsColumn">
                 <property name="title" translatable="yes">Details</property>
                 <property name="sort_indicator">True</property>
               </object>
@@ -289,7 +295,6 @@
     <property name="type">popup</property>
     <property name="title" translatable="yes">Add</property>
     <property name="resizable">False</property>
-    <property name="modal">True</property>
     <property name="window_position">center</property>
     <property name="destroy_with_parent">True</property>
     <property name="attached_to">btnAddPopup</property>
@@ -418,7 +423,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="btnClose">
+              <object class="GtkButton" id="btnAddWindowClose">
                 <property name="label" translatable="yes">Close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
