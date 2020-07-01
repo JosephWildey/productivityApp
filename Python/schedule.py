@@ -4,8 +4,8 @@ import csv
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-
-events = Gtk.ListStore(str, str, str, str)
+#store event information for retrieval and display in the treeview
+events = Gtk.ListStore(str, str, str, str, str)
 
 # fill events before it is attached to the treeview
 with open('schedule.csv', newline='') as f:
