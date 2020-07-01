@@ -15,12 +15,13 @@ events = Gtk.ListStore(str, str, str, str)
 # create a list to move to liststore
 eventsData = []
 
-# fill events before it is attached to the treeview
+# fill eventsData before it is attached to the treeview
 with open('schedule.csv', 'r') as f:
     reader = csv.reader(f, delimiter=',')
     for row in reader:
         eventsData.append(row)
 
+# move contents in eventsData to events liststore
 for i in range(len(eventsData)):
     events.append(eventsData[i])
 
