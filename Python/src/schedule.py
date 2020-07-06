@@ -38,11 +38,11 @@ addButton = builder.get_object("btnAddPopup")
 addCloseWindow = builder.get_object("btnAddWindowClose")
 
 def on_AddButton_clicked(self):
-    "This will display the popup when the add button is clicked"
+    """This will display the popup when the add button is clicked"""
     addEntryWindow.show_all()
 
 def on_CloseButton_clicked(self):
-    "This will close the add entry popup when clicked"
+    """This will close the add entry popup when clicked"""
     addEntryWindow.destroy()
 
 # connect the buttons to actions
